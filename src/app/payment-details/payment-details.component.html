@@ -1,0 +1,34 @@
+<!--<p>payment-details works!</p>-->
+<h1>Card Details Required!</h1>
+<div class= "container">
+<form>
+
+    <!-- cnumber -->
+    <div class="field">
+        <label for="cnumber">Card Number:</label> 
+        <input type="text" name="cnumber" class="input" placeholder="Your Card details">
+    </div>
+  
+    <!-- cname -->
+    <div class="field">
+        <label for="cname">Card Name:</label> 
+        <input type="text" name="cname" class="input" placeholder="Your Card Name">
+      </div>
+
+    <!-- expiery -->
+    <div class="field">
+        <label for="expDate" ng-class="{'show': expDate}">Expiration Date:</label>
+        <input type="text-1" name="expDate" class="input" placeholder="MM/YY">
+    
+  
+    <!-- cvv -->
+
+        <label for="cvv">CVV:</label> 
+        <input type="text-1" name="cvv" class="input" placeholder="">
+    </div>
+  
+    <button type="submit" class="nxt-btn" routerLink="">Back</button>
+    <button type="submit" class="nxt-btn-1" routerLink="/response">Submit</button>
+  
+  </form>
+</div>

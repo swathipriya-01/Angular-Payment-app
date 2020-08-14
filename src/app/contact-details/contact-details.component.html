@@ -1,0 +1,38 @@
+<!--<p>contact-details works!</p>-->
+<h1>Welcome To Payment App</h1>
+<div class="container">
+    <form (ngSubmit) = "onSubmit()" >
+
+    <!-- fname -->
+    <div class="field">
+        <label for="fname">First Name:</label> 
+        <input type="text" 
+        name="fname" 
+        class="input" 
+        placeholder="Your First Name"
+        required
+        ngModel>
+    </div>
+  
+    <!-- lname -->
+    <div class="field">
+        <label for="lname">Last Name:</label> 
+        <input type="text" name="lname" class="input" placeholder="Your Last Name" required ngModel>
+      </div>
+
+    <!-- email -->
+    <div class="field">
+        <label for="email">Email Id:</label> 
+        <input type="email" name="email" class="input" placeholder="Your  Email" required email ngModel>
+    </div>
+  
+    <!-- password -->
+    <div class="field">
+        <label for="password">Password:</label> 
+        <input type="password" name="password" class="input" placeholder="Your  Password" required ngModel>
+    </div>
+  
+    <button type="submit" class="nxt-btn" routerLink="/payment" (click)="onSubmit()">Next</button>
+  
+    </form>
+</div>
