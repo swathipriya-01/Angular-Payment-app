@@ -18,6 +18,7 @@ import { ResponseDetailsComponent } from './response-details/response-details.co
   ],
   imports: [
     BrowserModule,
+    FormsModule,
     AppRoutingModule
   ],
   providers: [],

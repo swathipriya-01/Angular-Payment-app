@@ -1,7 +1,7 @@
 <!--<p>contact-details works!</p>-->
 <h1>Welcome To Payment App</h1>
 <div class="container">
-    <form (ngSubmit) = "onSubmit()" >
+    <form (ngSubmit) = "onSubmit(f)" #f="ngForm">
 
     <!-- fname -->
     <div class="field">
@@ -10,29 +10,56 @@
         name="fname" 
         class="input" 
         placeholder="Your First Name"
+        #fname="ngModel"
         required
         ngModel>
     </div>
+    <span class= "error-msg" *ngIf="!fname.valid && fname.touched">* Please enter a valid First Name</span>
   
     <!-- lname -->
     <div class="field">
         <label for="lname">Last Name:</label> 
-        <input type="text" name="lname" class="input" placeholder="Your Last Name" required ngModel>
+        <input type="text" 
+        name="lname" 
+        class="input" 
+        placeholder="Your Last Name" 
+        #lname="ngModel"
+        required 
+        ngModel>
       </div>
+      <span class= "error-msg" *ngIf="!lname.valid && lname.touched">* Please enter a valid Last Name</span>
 
     <!-- email -->
     <div class="field">
         <label for="email">Email Id:</label> 
-        <input type="email" name="email" class="input" placeholder="Your  Email" required email ngModel>
+        <input type="email" 
+        name="email" 
+        class="input" 
+        placeholder="Your Email" 
+        #email="ngModel"
+        required 
+        email 
+        ngModel>
     </div>
+    <span class= "error-msg" *ngIf="!email.valid && email.touched">* Please enter a valid Email Address</span>
   
     <!-- password -->
     <div class="field">
         <label for="password">Password:</label> 
-        <input type="password" name="password" class="input" placeholder="Your  Password" required ngModel>
+        <input type="password" 
+        name="password" 
+        class="input" 
+        placeholder="Your  Password" 
+        #password="ngModel"
+        required 
+        ngModel>
     </div>
+    <span class= "error-msg" *ngIf="!password.valid && password.touched">* Please enter your Password</span>
   
-    <button type="submit" class="nxt-btn" routerLink="/payment" (click)="onSubmit()">Next</button>
-  
+    <div>
+    <button type="submit" 
+    class="nxt-btn"
+    [disabled]="!f.valid" routerLink="/payment">Next</button>
+</div>
     </form>
 </div>
